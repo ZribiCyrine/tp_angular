@@ -1,0 +1,8 @@
+input{
+    border: solid 2px;
+}
+input:active
+{
+    border: 0;
+
+}

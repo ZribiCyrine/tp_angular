@@ -1,0 +1,18 @@
+
+<div [style.background]="color" class="rounded" >
+   <div class="container">
+    <p>color works!</p>
+    <div class="row">
+<div class="col mb-8">
+        <input type="text" [(ngModel)]="color">
+
+    </div>
+        <div class="col">
+<button class="btn btn-danger"(click)="resetColor()">Reset Color TO RED</button>
+
+</div>
+    </div>
+
+<br> My color is {{color}}<br>
+</div> 
+</div>

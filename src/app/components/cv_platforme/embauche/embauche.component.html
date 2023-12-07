@@ -1,0 +1,15 @@
+<div *ngIf="personnesEm">
+  <div class="container">
+  <h4>  La liste des personnes embauchées : </h4>
+
+    <span *ngFor="let personne of personnesEm" class="Container">
+
+        <img src="assets/images/{{personne.path|defaultImage}}"
+             width="125px" height="125px"
+             class="rounded-circle align-content-center"
+             alt="{{personne.firstname}}">
+      {{personne.firstname|titlecase}} {{personne.name|titlecase}}
+
+    </span>
+  </div>
+  </div>

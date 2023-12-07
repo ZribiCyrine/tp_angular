@@ -1,0 +1,116 @@
+
+
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-md-6">
+<div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div class="cover">
+                <img src="assets/images/rotating_card_thumb3.png"/>
+            </div>
+            <div class="user">
+                <img class="img-circle" src="assets/images/{{image}}"/>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name">{{name}} {{firstname}}</h3>
+                    <p class="profession">{{job}}</p>
+
+                    <p class="text-center">{{citation}}</p>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="fa fa-mail-forward"></i> Auto Rotation
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+        <div class="back">
+            <div class="header">
+                <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h4 class="text-center">Job Description</h4>
+                    <p class="text-center">{{description}}</p>
+                    <h4 class="text-center">Mots Clées</h4>
+                    <p class="text-center">{{mots}}</p>
+
+                    <div class="stats-container">
+                        <div class="stats">
+                            <h4>235</h4>
+                            <p>
+                                Followers
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <h4>114</h4>
+                            <p>
+                                Following
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <h4>35</h4>
+                            <p>
+                                Projects
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="social-links text-center">
+                    <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                    <a href="https://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                    <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                </div>
+            </div>
+        </div> <!-- end back panel -->
+    </div> <!-- end card -->
+</div> <!-- end card-container -->
+</div>
+<div class="col-md-5">
+    <div class="container mt-4">
+        
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input   [(ngModel)]="name" type="text" class="form-control" id="name" placeholder="Entrer name">
+          </div>
+          <div class="form-group">
+            <label for="firstname">Firstname:</label>
+            <input [(ngModel)]="firstname" type="text" class="form-control" id="firstname" placeholder="Entrer firstname">
+          </div>
+          <div class="form-group">
+            <label for="job">Job:</label>
+            <input  [(ngModel)]="job" type="text" class="form-control" id="job" placeholder="Entrer job title">
+          </div>
+          <div class="form-group">
+            <label for="path">image:</label>
+            <input [(ngModel)]="image"  type="text" class="form-control" id="path" placeholder="Entrer image">
+          </div>
+
+          <div class="form-group">
+            <label for="path">citation favorite :</label>
+            <input [(ngModel)]="citation"  type="text" class="form-control" id="path" placeholder="Entrer citation favorite ">
+          </div>
+
+          <div class="form-group">
+            <label for="path">Decrivez nous votre travail:</label>
+            <input [(ngModel)]="description"  type="text" class="form-control" id="path" placeholder="Entrer description de votre travail">
+          </div>
+
+          <div class="form-group">
+            <label for="path">Mots clé de votre travail:</label>
+            <input [(ngModel)]="mots"  type="text" class="form-control" id="path" placeholder="Entrer les mots clé de votre travail">
+          </div>
+
+      
+          
+     
+        
+      </div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+.container {
+  width: 100%; /* Adjust the width as needed */
+  margin-top: 5%; /* Center the container horizontally */
+  padding: 80px; /* Add padding inside the container */
+  border: 1px solid #ccc; /* Add a border for visual separation */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  background-color: #f8f8f8; /* Set a background color */
+}

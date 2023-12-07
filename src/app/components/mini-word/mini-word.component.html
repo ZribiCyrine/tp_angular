@@ -1,0 +1,20 @@
+<div class="row">
+<div class="col-md-4">
+
+  <input  [ngStyle]="{'color' : color,'backgroundColor':bgcolor,'font-size':size ,'font-family':police}"  type="text" class="form-control" placeholder="text area" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="color"    >
+</div>
+<div class="col-md-4">
+  <input #sizeIn type="number" class="form-control" placeholder="Text size" aria-label="Recipient's username" aria-describedby="basic-addon2" (change)="changesize(sizeIn.value)" >
+
+</div>
+<div class="col-md-3 ">
+
+  <select  [(ngModel)]="police" class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose text font</option>
+    <option   value="Arial">Arial</option>
+    <option value="cursive">cursive</option>
+    <option  value="Verdana">Verdana</option>
+  
+  </select>
+</div>
+</div>
