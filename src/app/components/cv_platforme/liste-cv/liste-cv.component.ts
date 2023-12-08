@@ -11,7 +11,7 @@ import { CvService } from '../service/cv.service';
 export class ListeCvComponent implements OnInit {
   @Input() personnes: Personne[];
   //@Output() selectedPersonne = new EventEmitter();
-  personne!: Personne;
+  selectedPersonne!: Personne;
   private subscription!: Subscription;
 
   constructor(
@@ -23,7 +23,7 @@ export class ListeCvComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.cvService.selectedPersonne$.subscribe(
       personne => {
-        this.personne = personne;
+        this.selectedPersonne = personne;
       }
     )
   }

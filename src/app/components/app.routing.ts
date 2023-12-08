@@ -10,15 +10,6 @@ import { DetailCvComponent } from "./cv_platforme/detail-cv/detail-cv.component"
 import { DetailComponent } from "./cv_platforme/detail/detail.component";
 import { FormComponent } from "./form/form.component";
 
-
-
-
-
-
-
-
-
-
 const APP_ROUTING: Routes = [
     {path: 'cv', children: [
         {path: '', component: CvComponent},
@@ -27,16 +18,14 @@ const APP_ROUTING: Routes = [
 
     {path: '', component: CvComponent},
 
-
-    //tp3
+    //tp2
     {path: 'color', component: ColorComponent},
     {path: 'formulaire', component: FormComponent},
     {path: 'arc_ciel', component: ArcCielComponent},
     {path: 'carte_visite', component: CarteVisiteComponent},
     {path: 'default_image', component: DefaultImageComponent},
     {path: 'mini_word', component: MiniWordComponent},
-
     {path: '**', component: ErrorComponentComponent}
   ];
-  
+
   export const ROUTING = RouterModule.forRoot(APP_ROUTING);

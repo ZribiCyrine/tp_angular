@@ -11,12 +11,17 @@ import { EmbaucheservService } from '../service/embaucheserv.service';
   styleUrls: ['./embauche.component.css']
 })
 export class EmbaucheComponent {
+
   personnesEm!: Personne [];
   constructor(private embaucheService: EmbaucheservService) {
    }
 
   ngOnInit() {
     this.personnesEm = this.embaucheService.getEmbauchees();
+  }
+
+  deleteEmbauche(personne:Personne):void{
+    this.embaucheService.debaucher(personne);
   }
 
 }

@@ -10,12 +10,14 @@ import { Route, Router } from '@angular/router';
 })
 export class DetailCvComponent {
   @Input() personne: Personne;
+
   constructor(
     private embaucheService: EmbaucheservService,
     private router: Router
   ) {
     this.personne = new Personne();
   }
+  
   embaucher() {
     this.embaucheService.embaucher(this.personne);
   }

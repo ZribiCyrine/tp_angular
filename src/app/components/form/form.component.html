@@ -3,7 +3,7 @@
       <label for="email">Email:</label>
       <input type="email" id="email" ngModel name="email" class="form-control" email required #inputEmail="ngModel"  />
     </div>
-    
+
 
     <div class="alert alert-danger" *ngIf="!inputEmail.value && inputEmail.touched ">
       L' Email est requis.
@@ -13,21 +13,18 @@
       </div>
 
 
-
     <div>
       <label for="password" >Password:</label>
       <input required minlength="4" type="password" id="password" ngModel name="password" class="form-control"  #inputpwd="ngModel" />
     </div>
 
 
-    
     <div class="alert alert-danger" *ngIf="!inputpwd.value && inputpwd.touched ">
         Le password est requis.
       </div>
       <div class="alert alert-danger" *ngIf="inputpwd.invalid && inputpwd.touched">
         Le password doit avoir au moins 4 caractères .
-      </div> 
+      </div>
   <!-- Le bouton « envoyer » ne doit être cliquable que si le formulaire est valide. -->
     <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success" >Envoyer</button>
   </form>
-  

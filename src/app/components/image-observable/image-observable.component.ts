@@ -17,6 +17,7 @@ export class ImageObservableComponent implements OnInit {
     'seddik.jpg'
   ];
   currentImage!: string;
+  
   ngOnInit(): void {
     this.imgObservable= new Observable(
       (observer)=> {

@@ -35,7 +35,7 @@ export class DetailComponent {
 
   deletePersonne() {
     this.cvService.deletePersonne(this.personne);
-    this.embaucheservService.debaucher(this.personne);
+    //this.embaucheservService.debaucher(this.personne);
     const link = ['cv'];
     this.router.navigate(link);
   }

@@ -13,9 +13,7 @@ export class ItemCvComponent implements OnInit {
   //@Output() selectedPersonne=new EventEmitter<Personne>();
   constructor(
     private cvService: CvService
-  ) {
-
-  }
+  ) {}
 
   ngOnInit(): void {
   }
