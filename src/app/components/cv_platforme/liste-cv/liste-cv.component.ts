@@ -21,9 +21,9 @@ export class ListeCvComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.subscription= this.cvService.selectedPersonne$.subscribe(
-      personne=>{
-        this.personne=personne;
+    this.subscription = this.cvService.selectedPersonne$.subscribe(
+      personne => {
+        this.personne = personne;
       }
     )
   }

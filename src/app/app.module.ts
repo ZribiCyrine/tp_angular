@@ -31,11 +31,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailComponent } from './components/cv_platforme/detail/detail.component';
 import { FormComponent } from './components/form/form.component';
 import { ImageObservableComponent } from './components/image-observable/image-observable.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, SommeComponent, ComposantCouleurComponent, FilsComponent, ParentComponent, CvComponent, ListeCvComponent, ItemCvComponent, DetailCvComponent, CvComponent, MyDirDirective, DefaultImagePipe, MiniWordComponent,ColorComponent,CarteVisiteComponent,ArcCielDirective, ArcCielComponent,DefaultImagePipe,DefaultImageComponent, EmbaucheComponent, ErrorComponentComponent, NavbarComponent, DetailComponent, FormComponent, ImageObservableComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,BrowserAnimationsModule,ROUTING,ToastrModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,BrowserAnimationsModule,ROUTING,ToastrModule.forRoot(), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -29,6 +29,7 @@ export class EmbaucheservService {
     const index = this.personnesEm.indexOf(personne);
     if (index >= 0) {
       this.personnesEm.splice(index, 1);
+      this.toastr.error(`${personne.name} supprimé(e) de la liste des personnes embauchées`, 'cv supprimé');
     }
   }
 }

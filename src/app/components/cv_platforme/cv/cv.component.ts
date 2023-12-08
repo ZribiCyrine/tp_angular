@@ -15,14 +15,14 @@ export class CvComponent implements OnInit {
 
   constructor(
     private cv_service: CvService
-    ) {
+  ) {
     this.personnes = this.personnes = this.cv_service.getPersonnesCv();
   }
 
   ngOnInit(): void {
-    this.subscription=this.cv_service.selectedPersonne$.subscribe(
-      personne=>{
-        this.selectedPersonne=personne;
+    this.subscription = this.cv_service.selectedPersonne$.subscribe(
+      personne => {
+        this.selectedPersonne = personne;
       }
     )
   }
@@ -30,6 +30,4 @@ export class CvComponent implements OnInit {
   selectPersonne(personne: Personne) {
     this.selectedPersonne = personne;
   }
-
-
 }

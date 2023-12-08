@@ -17,7 +17,6 @@ export class DetailComponent {
     private cvService: CvService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private toastr: ToastrService,
     private embaucheservService: EmbaucheservService
   ) { }
 
@@ -39,7 +38,5 @@ export class DetailComponent {
     this.embaucheservService.debaucher(this.personne);
     const link = ['cv'];
     this.router.navigate(link);
-    this.toastr.error(`${this.personne.name} supprimé(e) de la liste des CV`, 'cv supprimé');
-    this.toastr.error(`${this.personne.name} supprimé(e) de la liste des personnes embauchées`, 'cv supprimé');
   }
 }

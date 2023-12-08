@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Personne } from '../Model/Personne';
-import { Subject } from 'rxjs';
+import { Observable, Subject, catchError, of, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +14,15 @@ export class CvService {
   private selectedPersonne = new Subject<Personne>();
   selectedPersonne$ = this.selectedPersonne.asObservable();
 
-  constructor() {
+  constructor(
+    private toastr: ToastrService,
+  ) {
     this.personnes = [
       new Personne(1, 'Ben Omrane', 'Med Salim', 22, 'salim.jpg', 88888888, 'WEB DEV'),
       new Personne(2, 'Zribi', 'cyrine', 22, 'cyrine.jpg', 11111111, 'WEB DEV'),
       new Personne(3, 'Hammami ', 'Omar', 23, 'omar.jpg', 22222222, 'WEB DEV'),
       new Personne(4, 'Ben Jeddou', 'May', 22, 'may.jpg', 33333333, 'WEB DEV'),
       new Personne(5, 'Turki', 'Med Seddik', 22, 'seddik.jpg', 44444444, 'WEB DEV'),
-
     ];
   }
 
@@ -39,6 +42,8 @@ export class CvService {
     const index = this.personnes.indexOf(personne);
     if (index >= 0) {
       this.personnes.splice(index, 1);
+      this.toastr.error(`${personne.name} supprimé(e) de la liste des CV`, 'cv supprimé');
     }
   }
+
 }
